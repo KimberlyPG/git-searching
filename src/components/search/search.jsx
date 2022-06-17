@@ -1,7 +1,7 @@
-import { SearchBarContainer } from "./searchbar.styles";
+import { SearchBarContainer } from "./search.styles";
 import { useState } from "react";
 
-const SearchBar = () => { 
+const Search = () => { 
   const [data, setData] = useState({});
   // const [click, setClick] = useState(false);
   const [user, setUser] = useState('');
@@ -45,4 +45,4 @@ const SearchBar = () => {
   )
 }
 
-export default SearchBar;
+export default Search;
