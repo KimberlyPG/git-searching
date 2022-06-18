@@ -4,10 +4,10 @@ import { Outlet } from "react-router-dom";
 import logo from '../../assets/logo.png';
 import { LogoContainer, NavigationContainer, NavLink, NavLinks } from "./navigation.styles";
 
-const Navigation = () => {
+const Navigation = ({background}) => {
     return (
         <div>
-            <NavigationContainer >         
+            <NavigationContainer background={background}>         
                 <LogoContainer to='/'>
                     <img src={logo} alt="" />
                 </LogoContainer>

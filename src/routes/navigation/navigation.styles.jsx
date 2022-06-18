@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import bg from '../../assets/background.webp';
 
 export const NavigationContainer = styled.div`
-  height: 90px;
+  height: 65px;
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
+  background-color: ${props => props.background};
 `;
 
 export const LogoContainer = styled(Link)`
@@ -30,4 +30,4 @@ export const NavLink = styled(Link)`
   cursor: pointer;
   text-decoration: none;
   color: white;
-`;
+  `;

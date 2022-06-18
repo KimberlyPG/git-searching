@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Navigation from '../../routes/navigation/navigation';
 
 export const SearchBarContainer = styled.div`
     -webkit-appearance: none;
@@ -10,6 +11,4 @@ export const SearchBarContainer = styled.div`
     margin-bottom: 30px;
     margin-left: 40%;
 `
-
-
   

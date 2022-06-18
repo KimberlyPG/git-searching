@@ -3,7 +3,7 @@ import { Routes, Route} from "react-router-dom";
 import logo from './logo.svg';
 import './App.css';
 import Navigation from './routes/navigation/navigation';
-import Search from './components/search/search';
+import Search from './routes/search/search';
 import Home from './routes/home/home';
 
 function App() {

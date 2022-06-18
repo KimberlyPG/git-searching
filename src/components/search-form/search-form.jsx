@@ -1,9 +1,8 @@
-import { SearchBarContainer } from "./search.styles";
 import { useState } from "react";
-import Navigation from "../../routes/navigation/navigation";
-const Search = () => { 
+import {SearchFormContainer, Text} from './search-form.styles';
+
+const SearchForm = () => { 
   const [data, setData] = useState({});
-  // const [click, setClick] = useState(false);
   const [user, setUser] = useState('');
 
   const handleSubmit = (event) => {
@@ -26,8 +25,7 @@ const Search = () => {
   console.log(user);
 
   return(
-    <div>
-      <Navigation/>
+    <SearchFormContainer>
       <form onSubmit={handleSubmit}>
         {/* <SearchBarContainer> */}
         <input
@@ -38,12 +36,12 @@ const Search = () => {
         {/* </SearchBarContainer>   */}
         <button type="submit">Search</button>
       </form>
-      {data && <h3>Name: {data.name}</h3>}
       {data && <img src={data.avatar_url} alt={`user ${data.login}`}/>}
-      {data && <h3>Followers: {data.followers}</h3>}
-      {data && <h3>Following: {data.following}</h3>}
-    </div>
+      {data && <Text>Name: {data.name}</Text>}
+      {data && <Text>Followers: {data.followers}</Text>}
+      {data && <Text>Following: {data.following}</Text>}
+    </SearchFormContainer>
   )
 }
 
-export default Search;
+export default SearchForm;
