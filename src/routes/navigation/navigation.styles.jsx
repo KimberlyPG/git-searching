@@ -23,6 +23,7 @@ export const NavLinks = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  padding-right: 3%;
 `;
 
 export const NavLink = styled(Link)`

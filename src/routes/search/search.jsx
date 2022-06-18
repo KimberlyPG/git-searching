@@ -1,11 +1,16 @@
 import Navigation from "../../routes/navigation/navigation";
 import SearchForm from "../../components/search-form/search-form";
+import Footer from "../../components/footer/footer";
+import { Title } from "./search.styles";
+
 const Search = () => { 
   return(
-    <div>
+    <>
       <Navigation background="#24292f" />
+      <Title>Search a profile</Title>
       <SearchForm />
-    </div>
+      <Footer position="absolute"/>
+    </>
   )
 };
 

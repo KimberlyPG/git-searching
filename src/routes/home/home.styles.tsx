@@ -9,3 +9,10 @@ export const HomeBackground = styled.div`
   width: 100vw;
   height: 100vh;
 `;
+
+export const H1 = styled.h1`
+  // font-weight: bold;
+  margin-top: 17%;
+  padding-left: 10%;
+  color: white;
+`

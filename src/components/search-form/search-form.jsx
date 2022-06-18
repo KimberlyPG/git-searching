@@ -1,5 +1,5 @@
 import { useState } from "react";
-import {SearchFormContainer, Text} from './search-form.styles';
+import {SearchFormContainer, Text, MainInformation, ExtraInformation, Image} from './search-form.styles';
 
 const SearchForm = () => { 
   const [data, setData] = useState({});
@@ -36,10 +36,16 @@ const SearchForm = () => {
         {/* </SearchBarContainer>   */}
         <button type="submit">Search</button>
       </form>
-      {data && <img src={data.avatar_url} alt={`user ${data.login}`}/>}
-      {data && <Text>Name: {data.name}</Text>}
-      {data && <Text>Followers: {data.followers}</Text>}
-      {data && <Text>Following: {data.following}</Text>}
+      <MainInformation>
+        <div>
+          {data && <img src={data.avatar_url} alt={`user ${data.login}`}/>}
+          {data && <Text>Name: {data.login}</Text>}
+        </div>
+        <ExtraInformation>
+          {data && <Text>Followers: {data.followers}</Text>}
+          {data && <Text>Following: {data.following}</Text>}
+        </ExtraInformation>
+      </MainInformation>
     </SearchFormContainer>
   )
 }
