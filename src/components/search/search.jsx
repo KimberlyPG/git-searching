@@ -1,6 +1,6 @@
 import { SearchBarContainer } from "./search.styles";
 import { useState } from "react";
-
+import Navigation from "../../routes/navigation/navigation";
 const Search = () => { 
   const [data, setData] = useState({});
   // const [click, setClick] = useState(false);
@@ -27,6 +27,7 @@ const Search = () => {
 
   return(
     <div>
+      <Navigation/>
       <form onSubmit={handleSubmit}>
         {/* <SearchBarContainer> */}
         <input
