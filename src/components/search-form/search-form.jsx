@@ -1,5 +1,5 @@
 import { useState } from "react";
-import {SearchFormContainer, Text, MainInformation, ExtraInformation, Image} from './search-form.styles';
+import {SearchFormContainer, Text, MainInformation, ExtraInformation } from './search-form.styles';
 
 const SearchForm = () => { 
   const [data, setData] = useState({});

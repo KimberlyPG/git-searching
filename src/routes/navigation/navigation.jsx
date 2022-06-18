@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 // import { ReactComponent as GitLogo } from '../../assets/logo.svg'
 import logo from '../../assets/logo.png';
