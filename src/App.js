@@ -1,9 +1,9 @@
 import React from 'react';
 import { Routes, Route} from "react-router-dom";
 import './App.css';
-import Navigation from './routes/navigation/navigation';
-import Search from './routes/search/search';
-import Home from './routes/home/home';
+import Navigation from './containers/Navigation';
+import Search from './containers/Search';
+import Home from './containers/Home';
 
 function App() {
   
@@ -13,7 +13,6 @@ function App() {
         <Route index element={<Home />} />
         <Route path='search' element={<Search />} />
     </Routes>
-    // <Home />
   );
 }
 

@@ -1,5 +1,6 @@
 import { FooterContainer, InformationContainer, Title, Name } from "./footer.styles";
-const Footer = ({position}) => {
+
+const Footer = ({ position }) => {
     return(
         <FooterContainer position={position}>  
             <InformationContainer >

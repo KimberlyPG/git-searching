@@ -1,19 +1,14 @@
 import { useState } from "react";
-import {SearchFormContainer, Text, MainInformation, ExtraInformation } from './search-form.styles';
+import {SearchFormContainer, SearchBar, Text, MainInformation, ExtraInformation } from './search-form.styles';
 
-const SearchForm = () => { 
-  const [data, setData] = useState({});
+const SearchForm = ({ data, submitCallback }) => { 
   const [user, setUser] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    fetch(`https://api.github.com/users/${user}`)
-        .then(res => res.json())
-        .then(data => setData(data)) 
+    submitCallback(user);
   };
-  console.log(data);    
 
-  
   const handleSearch = (event) => {
     event.preventDefault();
     try{
@@ -22,18 +17,15 @@ const SearchForm = () => {
       console.log(e);
     }
   };
-  console.log(user);
 
   return(
     <SearchFormContainer>
       <form onSubmit={handleSubmit}>
-        {/* <SearchBarContainer> */}
-        <input
+        <SearchBar
             type='text'
             // value={user}
             onChange={handleSearch}
         />
-        {/* </SearchBarContainer>   */}
         <button type="submit">Search</button>
       </form>
       <MainInformation>

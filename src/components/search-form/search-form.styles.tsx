@@ -10,23 +10,41 @@ export const SearchFormContainer = styled.div`
         padding-top: 7%;
         width: 50%;
     }
+
+    @media screen and (max-width: 414px){
+        img {
+            width: 90%;
+        }
+        width: 100%;
+    }
 `
-// export const Image = styled.img`
-//     padding-top: 20px;
-//     width: 30%;
-// `
+export const SearchBar = styled.input`
+    width: 70%;
+    margin: auto;
+    // display: block;
+    margin-bottom: 5%;
+    margin-top: 5%;
+`
 
 export const Text = styled.div`
     font-size: 15px;
     color: #707070;
+    @media screen and (max-width: 414px){
+        font-size: 19px;
+    }
 `
 
 export const MainInformation = styled.div`
     display: flex;
-    // justify-content: space-between;
+    @media screen and (max-width: 414px){
+        display: block;
+    }
 `
 
 export const ExtraInformation = styled.div`
     padding-top: 25px;
     width: 50%;
+    @media screen and (max-width: 414px){
+        width: 100%;
+    }
 `
