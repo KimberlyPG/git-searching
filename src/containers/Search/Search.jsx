@@ -2,7 +2,7 @@ import { useState,useEffect } from "react";
 import Navigation from "../Navigation/Navigation";
 import SearchForm from "../../components/Search-form";
 import Footer from "../../components/Footer";
-import { Title } from "./search.styles";
+import { Title, Body } from "./search.styles";
 
 const Search = () => { 
   const [data, setData] = useState({});
@@ -21,10 +21,12 @@ const Search = () => {
 
   return(
     <>
-      <Navigation background="#24292f" />
-      <Title>Search a profile</Title>
-      <SearchForm data={data} submitCallback={handleSubmit} />
-      <Footer position="fixed"/>
+      <Body>
+        <Navigation background="#24292f" />
+        <Title>Search a profile</Title>
+        <SearchForm data={data} submitCallback={handleSubmit} />
+      </Body>
+      <Footer position="absolute"/>
     </>
   )
 };

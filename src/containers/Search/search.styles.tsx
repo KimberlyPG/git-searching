@@ -5,3 +5,7 @@ export const Title = styled.div`
     text-align: center;
     font-weight: bold;
 `
+
+export const Body = styled.div`
+    position: relative;
+`
