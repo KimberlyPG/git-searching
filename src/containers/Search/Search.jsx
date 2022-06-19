@@ -1,6 +1,6 @@
 import { useState,useEffect } from "react";
 import Navigation from "../Navigation/Navigation";
-import SearchForm from "../../components/Search-form/Search-form";
+import SearchForm from "../../components/Search-form";
 import Footer from "../../components/Footer";
 import { Title } from "./search.styles";
 
