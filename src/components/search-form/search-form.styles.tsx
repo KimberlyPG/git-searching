@@ -31,6 +31,8 @@ export const Text = styled.div`
     color: #707070;
     @media screen and (max-width: 414px){
         font-size: 19px;
+        padding: 2%;
+        margin-bottom: 2%;
     }
 `
 
