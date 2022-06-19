@@ -26,7 +26,7 @@ const Search = () => {
         <Title>Search a profile</Title>
         <SearchForm data={data} submitCallback={handleSubmit} />
       </Body>
-      <Footer position="absolute"/>
+      <Footer position="relative"/>
     </>
   )
 };

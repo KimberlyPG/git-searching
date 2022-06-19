@@ -8,4 +8,5 @@ export const Title = styled.div`
 
 export const Body = styled.div`
     position: relative;
+    padding-bottom: 5em;
 `
