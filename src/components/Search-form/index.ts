@@ -1,2 +1,1 @@
-// export { default } from './Search-form';
-export {}
+export { default } from './Search-form';

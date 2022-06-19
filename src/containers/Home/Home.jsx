@@ -1,6 +1,6 @@
 import { HomeBackground, H1} from './home.styles';
 import Navigation from '../Navigation';
-import Footer from '../../components/Footer/Footer';
+import Footer from '../../components/Footer';
 
 const Home = () => {
     return (
