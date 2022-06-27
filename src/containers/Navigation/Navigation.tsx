@@ -1,9 +1,14 @@
-import { Outlet } from "react-router-dom";
+import { FC } from "react";
+// import { Outlet } from "react-router-dom";
 // import { ReactComponent as GitLogo } from '../../assets/logo.svg'
 import logo from '../../assets/logo.png';
 import { LogoContainer, NavigationContainer, NavLink, NavLinks } from "./navigation.styles";
 
-const Navigation = ({background}) => {
+type NavigationProps = {
+    background: string;
+}
+
+const Navigation: FC<NavigationProps> = ({ background }) => {
     return (
         <div>
             <NavigationContainer background={background}>         
@@ -15,7 +20,7 @@ const Navigation = ({background}) => {
                 <NavLink to='/search'>SEARCH</NavLink>
                 </NavLinks>
             </NavigationContainer>
-            <Outlet />
+            {/* <Outlet /> */}
         </div>
         )
 }

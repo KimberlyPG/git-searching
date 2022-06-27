@@ -1,15 +1,27 @@
-import { useState } from "react";
+import { useState, FormEvent, ChangeEvent, FC } from "react";
 import {SearchFormContainer, SearchBar, Text, MainInformation, ExtraInformation } from './search-form.styles';
 
-const SearchForm = ({ data, submitCallback }) => { 
+export type DataProps = {
+  avatar_url: string;
+  login: string;
+  followers: string;
+  following: string;
+}
+
+type SearchFormProps = {
+  data: DataProps | undefined;
+  submitCallback(user: string):void;
+}
+
+const SearchForm:  FC<SearchFormProps> = ({ data, submitCallback }) => { 
   const [user, setUser] = useState('');
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     submitCallback(user);
-  };
+  }
 
-  const handleSearch = (event) => {
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     event.preventDefault();
     try{
       setUser(event.target.value);
@@ -24,7 +36,7 @@ const SearchForm = ({ data, submitCallback }) => {
         <SearchBar
             type='text'
             // value={user}
-            onChange={handleSearch}
+            onChange={handleChange}
         />
         <button type="submit">Search</button>
       </form>

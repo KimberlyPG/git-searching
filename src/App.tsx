@@ -1,15 +1,14 @@
-import React from 'react';
 import { Routes, Route} from "react-router-dom";
 import './App.css';
 import Navigation from './containers/Navigation';
 import Search from './containers/Search';
 import Home from './containers/Home';
 
-function App() {
-  
+
+const App = () => {
   return (
     <Routes>
-      <Route path="/" element={<Navigation />} />
+      <Route path="/" element={<Navigation background=''/>} />
         <Route index element={<Home />} />
         <Route path='search' element={<Search />} />
     </Routes>

@@ -1,8 +1,10 @@
 import { FooterContainer, InformationContainer, Title, Name } from "./footer.styles";
 
-const Footer = ({ position }) => {
+
+
+const Footer = () => {
     return(
-        <FooterContainer position={position}>  
+        <FooterContainer>  
             <InformationContainer >
                 <Title>GitHub</Title>
                 <Name>&#169; Kimberly García</Name>

@@ -1,15 +1,11 @@
 import styled from "styled-components";
 
-type PositionProps = {
-    position: string;
-}
-
-export const FooterContainer = styled.div<PositionProps>`
+export const FooterContainer = styled.div`
     heigh: 20px;
     width: 100%;
     background: white;
     bottom: 0px;
-    position: ${props => props.position};
+    position: relative;
 `
 export const InformationContainer = styled.div`
     display: flex;

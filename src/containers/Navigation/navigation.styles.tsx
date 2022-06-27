@@ -1,7 +1,11 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-export const NavigationContainer = styled.div`
+type BackgroundColorProps = {
+  background: string;
+}
+
+export const NavigationContainer = styled.div<BackgroundColorProps>`
   height: 65px;
   width: 100%;
   display: flex;

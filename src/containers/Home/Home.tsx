@@ -1,15 +1,16 @@
+import { FC } from 'react';
 import { HomeBackground, H1} from './home.styles';
 import Navigation from '../Navigation';
 import Footer from '../../components/Footer';
 
-const Home = () => {
+const Home:FC = () => {
     return (
         <>
             <HomeBackground>
-                <Navigation />
+                <Navigation background='' />
                 <H1>GitHub User Information</H1>
             </HomeBackground>
-            <Footer position="relative"/>
+            <Footer />
         </>
     )      
 }
